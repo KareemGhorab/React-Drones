@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 input {
-  @apply outline-1 ;
+  @apply outline-1;
+}
+
+.hero__button {
+  @apply flex w-36 items-center justify-center rounded-full bg-red-500 py-4 transition-colors duration-300 hover:bg-primary-700;
 }

@@ -19,9 +19,9 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],
+      "~/container": ["./src/components/layout/container.tsx"],
       "~/components/*": ["./src/components/*"],
       "~/hooks/*": ["./src/hooks/*"],
-      "~/container": ["./src/components/layout/container.tsx"]
     }
   },
   "include": [

@@ -9,16 +9,16 @@ export default function List() {
           <Link href='/'>Home</Link>
         </li>
         <li>
-          <Link href='/'>Store</Link>
+          <Link href='/store'>Store</Link>
         </li>
         <li>
-          <Link href='/'>About Us</Link>
+          <Link href='/about'>About Us</Link>
         </li>
         <li>
-          <Link href='/'>Blog</Link>
+          <Link href='/blog'>Blog</Link>
         </li>
         <li>
-          <Link href='/'>Contact Us</Link>
+          <Link href='/contact'>Contact Us</Link>
         </li>
       </ul>
     </Container>
