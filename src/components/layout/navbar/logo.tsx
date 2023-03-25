@@ -1,12 +1,30 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBolt } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
+import cn from 'classnames'
 
-export default function Logo() {
+interface Props {
+  large?: boolean
+}
+
+export default function Logo({ large = false }: Props) {
   return (
-    <Link className='flex items-center gap-1' href='/'>
-      <FontAwesomeIcon icon={faBolt} size='lg' />
-      <h1 className='text-2xl font-semibold'>Drones</h1>
+    <Link
+      className={`flex items-center ${cn({
+        'gap-2': large,
+        'gap-1': !large,
+      })}`}
+      href='/'
+    >
+      <FontAwesomeIcon icon={faBolt} size={large ? '2xl' : 'lg'} />
+      <h1
+        className={`font-semibold ${cn({
+          'text-4xl': large,
+          'text-2xl': !large,
+        })}`}
+      >
+        Drones
+      </h1>
     </Link>
   )
 }

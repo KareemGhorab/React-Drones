@@ -1,22 +1,11 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import useToggle from '~/hooks/useToggle'
+import React from 'react'
 
-import Logo from './logo'
-import Sidenav from './sidenav'
+import useWindow from '~/hooks/useWindow'
+import MobileNav from './mobile/navbar'
+import DesktopNav from './desktop/navbar'
 
 export default function Navbar() {
-  const [showNav, toggleNav] = useToggle()
+  const { width } = useWindow()
 
-  return (
-    <nav className='bg-primary-500 p-5 text-white'>
-      <div className='flex justify-between'>
-        <Logo />
-        <button onClick={() => toggleNav()}>
-          <FontAwesomeIcon icon={faBars} size='xl' />
-        </button>
-      </div>
-      {showNav && <Sidenav onClose={toggleNav} />}
-    </nav>
-  )
+  return <>{width < 1024 ? <MobileNav /> : <DesktopNav />}</>
 }

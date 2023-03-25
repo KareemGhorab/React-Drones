@@ -20,7 +20,8 @@
     "paths": {
       "~/*": ["./src/*"],
       "~/components/*": ["./src/components/*"],
-      "~/hooks/*": ["./src/hooks/*"]
+      "~/hooks/*": ["./src/hooks/*"],
+      "~/container": ["./src/components/layout/container.tsx"]
     }
   },
   "include": [

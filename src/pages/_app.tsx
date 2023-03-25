@@ -8,6 +8,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import { api } from '~/utils/api'
 
 import '~/styles/globals.css'
+import Navbar from '~/components/layout/navbar/navbar'
 
 const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' })
 config.autoAddCss = false
@@ -19,6 +20,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <main className={`${nunito.variable} font-sans`}>
       <SessionProvider session={session}>
+        <Navbar />
         <Component {...pageProps} />
       </SessionProvider>
     </main>

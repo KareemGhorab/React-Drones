@@ -7,10 +7,17 @@ import {
 
 const useToggle = (
   initialState = false
-): [boolean, Dispatch<SetStateAction<void>>] => {
+): {
+  state: boolean
+  toggle: Dispatch<SetStateAction<void>>
+  on: Dispatch<SetStateAction<void>>
+  off: Dispatch<SetStateAction<void>>
+} => {
   const [state, setState] = useState<boolean>(initialState)
   const toggle = useCallback((): void => setState((state) => !state), [])
-  return [state, toggle]
+  const on = useCallback((): void => setState(true), [])
+  const off = useCallback((): void => setState(false), [])
+  return { state, toggle, on, off }
 }
 
 export default useToggle
