@@ -6,6 +6,7 @@ const config = {
       colors: {
         primary: {
           500: '#3e51eb',
+          600: '#1d1678f0',
           700: '#1D1678',
         },
       },

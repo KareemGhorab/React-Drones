@@ -1,6 +1,5 @@
-import Logo from '../logo'
-import Search from '../search'
 import Contact from './contact'
+import List from './list'
 import Main from './main'
 
 export default function Navbar() {
@@ -8,6 +7,7 @@ export default function Navbar() {
     <nav className='text-white'>
       <Contact />
       <Main />
+      <List />
     </nav>
   )
 }
