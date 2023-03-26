@@ -1,7 +1,7 @@
 import Container from '~/container'
 import Logo from '../logo'
 import Search from '../search'
-import UserSection from './userSection'
+import UserSection from './user-section'
 
 export default function Main() {
   return (
